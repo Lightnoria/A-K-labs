@@ -1,0 +1,44 @@
+make -C /home/yaroslav/repos/linux-stable/ M=$PWD
+make[1]: Entering directory '/home/yaroslav/repos/linux-stable'
+  CC [M]  /home/yaroslav/module_test/hello_world.o
+/home/yaroslav/module_test/hello_world.c: In function ‘hello_init’:
+/home/yaroslav/module_test/hello_world.c:24:12: warning: suggest parentheses around comparison in operand of ‘&’ [-Wparentheses]
+   24 |  if (param >= 5 & param <= 10) {
+      |      ~~~~~~^~~~
+/home/yaroslav/module_test/hello_world.c:34:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   34 |  int i;
+      |  ^~~
+/home/yaroslav/module_test/hello_world.c: In function ‘hello_exit’:
+/home/yaroslav/module_test/hello_world.c:51:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   51 |  struct occur_list *tmp, *node;
+      |  ^~~~~~
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:14,
+                 from ./include/asm-generic/bug.h:18,
+                 from ./arch/x86/include/asm/bug.h:83,
+                 from ./include/linux/bug.h:5,
+                 from ./include/linux/mmdebug.h:5,
+                 from ./include/linux/gfp.h:5,
+                 from ./include/linux/slab.h:15,
+                 from /home/yaroslav/module_test/hello_world.c:2:
+./include/linux/kern_levels.h:5:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘ktime_t’ {aka ‘long long int’} [-Wformat=]
+    5 | #define KERN_SOH "\001"  /* ASCII Start Of Header */
+      |                  ^~~~~~
+./include/linux/kern_levels.h:14:19: note: in expansion of macro ‘KERN_SOH’
+   14 | #define KERN_INFO KERN_SOH "6" /* informational */
+      |                   ^~~~~~~~
+/home/yaroslav/module_test/hello_world.c:53:9: note: in expansion of macro ‘KERN_INFO’
+   53 |  printk(KERN_INFO "%d\n", node->time);
+      |         ^~~~~~~~~
+/home/yaroslav/module_test/hello_world.c:53:21: note: format string is defined here
+   53 |  printk(KERN_INFO "%d\n", node->time);
+      |                    ~^
+      |                     |
+      |                     int
+      |                    %lld
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/yaroslav/module_test/hello_world.mod.o
+  LD [M]  /home/yaroslav/module_test/hello_world.ko
+make[1]: Leaving directory '/home/yaroslav/repos/linux-stable'
+
