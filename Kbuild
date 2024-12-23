@@ -1,3 +1,5 @@
 
 # kbuild part of makefile
-obj-m := hello_world.o
+ccflags-y := -I $(src)/inc
+obj-m := hello1.o hello2.o
+
