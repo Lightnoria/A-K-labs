@@ -18,10 +18,7 @@ static int __init hello_init(void)
 	if (param == 0) {
 	pr_warn("PARAMETER EQUALS 0\n");
 	}
-	if (param > 10) {
-		pr_err("PARAMETER MORE THAN 10\n");
-		return -EINVAL;
-	}
+	BUG_ON(param>10);
     ktime_t b_temp, a_temp;
     int i;
     for (i = 0; i < param; i++) {

@@ -1,2 +1,2 @@
-kernel//home/yaroslav/Desktop/CompArchitecture/module_test/hello1.ko
-kernel//home/yaroslav/Desktop/CompArchitecture/module_test/hello2.ko
+/home/yaroslav/Desktop/CompArchitecture/module_test/hello1.o
+/home/yaroslav/Desktop/CompArchitecture/module_test/hello2.o

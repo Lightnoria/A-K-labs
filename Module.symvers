@@ -1,2 +1,2 @@
-0x00000000	add_elem	/home/yaroslav/Desktop/CompArchitecture/module_test/hello1	EXPORT_SYMBOL
-0x00000000	hello_print	/home/yaroslav/Desktop/CompArchitecture/module_test/hello1	EXPORT_SYMBOL
+0xddcc7979	hello_print	/home/yaroslav/Desktop/CompArchitecture/module_test/hello1	EXPORT_SYMBOL	
+0xc4ce86f4	add_elem	/home/yaroslav/Desktop/CompArchitecture/module_test/hello1	EXPORT_SYMBOL	

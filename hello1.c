@@ -12,6 +12,7 @@ struct occur_list{
 };
 static LIST_HEAD(occ_list);
 struct occur_list *list_node;
+int num = 0;
 
 void hello_print(int param){
 	pr_info("Hello World!\n");
@@ -27,6 +28,11 @@ int add_elem(ktime_t before, ktime_t after){
     list_node->time_after = after;
 	INIT_LIST_HEAD(&list_node->list);
 	list_add_tail(&list_node->list, &occ_list);
+	num++;
+	if(num==5){
+		pr_err("начебто kmalloc() повернув 0");
+		BUG();
+	}
     return 0;
 }
 
